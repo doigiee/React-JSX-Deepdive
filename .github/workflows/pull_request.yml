@@ -1,0 +1,30 @@
+name: Submission
+on: pull_request
+jobs: 
+  one:
+    name: Update Challenge Status
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1.4.4
+        with:
+          node-version: '14'
+
+      - run: yarn install
+
+      - id: react-tests
+        continue-on-error: true
+        env: 
+          NODE_ENV: test
+        run: yarn test
+
+      - name: Tests Failed
+        if: steps.react-tests.outcome == 'failure'
+        uses: wei/curl@v1 
+        with:
+          args: '-X PATCH -H ''Authorization: Token ${{ secrets.ACTION_TOKEN }}'' ''${{ secrets.ACTION_URL }}?student=${{ github.actor }}&challenge=${{ github.repository }}&status=attempted'''
+      - name: Tests Success
+        if: steps.react-tests.outcome == 'success'
+        uses: wei/curl@v1 
+        with:
+          args: '-X PATCH -H ''Authorization: Token ${{ secrets.ACTION_TOKEN }}'' ''${{ secrets.ACTION_URL }}?student=${{ github.actor }}&challenge=${{ github.repository }}&status=completed'''
