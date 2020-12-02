@@ -10,7 +10,7 @@
 6. Verify the application runs as expected
 
 ### What you should see
-<img src="./docs/init.gif" height="500px" width="500px">
+[Link to YouTube](https://youtu.be/cnI6TjEoVU4)
 
 
 ## Challenge
