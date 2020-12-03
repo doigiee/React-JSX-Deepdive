@@ -18,7 +18,7 @@ const App = () => {
                     <h2>This is Me!</h2>
                     <a className="external" href="#top">Top</a>
                 </div>
-                <img src="https://randomuser.me/api/portraits/women/8.jpg" />
+                <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="profilePic"/>
                 <article>
                     <ol>
                         <li>
@@ -51,25 +51,25 @@ const App = () => {
                 </div>
                 <article>
                     <h4>Pizza</h4>
-                    <img src="pizza.jpg" />
+                    <img src="pizza.jpg" alt="pizza"/>
                     <p>Best time to eat: <span>All the time</span></p>
                     <p>Best place: <span>Queen Margharitas</span></p>
                 </article>
                 <article>
                     <h4>Quesadillas</h4>
-                    <img src="quesadilla.jpg" />
+                    <img src="quesadilla.jpg" alt="quesadillas"/>
                     <p>Best time to eat: <span>Afternoon Siesta</span></p>
                     <p>Best place: <span>Mejico</span></p>
                 </article>
                 <article>
                     <h4>Icecream Pancakes</h4>
-                    <img src="icecream_pancakes.jpg" />
+                    <img src="icecream_pancakes.jpg" alt="pancakes"/>
                     <p>Best time to eat: <span>Breaky</span></p>
                     <p>Best place: <span>Pancakes on the Rocks</span></p>
                 </article>
                 <article>
                     <h4>Loaded Fries</h4>
-                    <img src="loaded_fries.jpg" />
+                    <img src="loaded_fries.jpg" alt="fries"/>
                     <p>Best time to eat: <span>During the game</span></p>
                     <p>Best place: <span>My House</span></p>
                 </article>
