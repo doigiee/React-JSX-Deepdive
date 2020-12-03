@@ -80,13 +80,13 @@ const App = () => {
                     <a className="external" href="#top">Top</a>
                 </div>
                 <p>
-                    <b>Phone:</b> +12345678
+                    <b>Phone:</b> <a class="external" href="tel:12345678">+12345678</a>
                 </p>
                 <p>
-                    <b>Email:</b> thatsme@test.com
+                    <b>Email:</b> <a class="external" href="mailto:test@test.com">thatsme@test.com</a>
                 </p>
                 <p>
-                    <b>Twitter:</b> #superfun
+                    <b>Twitter:</b> <a class="external" href="#twitter">#superfun</a> 
                 </p>
             </section>
             <footer>
