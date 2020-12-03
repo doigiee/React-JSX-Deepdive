@@ -51,25 +51,25 @@ const App = () => {
                 </div>
                 <article>
                     <h4>Pizza</h4>
-                    <img src="https://bit.ly/2rJ4rnn" />
+                    <img src="pizza.jpg" />
                     <p>Best time to eat: <span>All the time</span></p>
                     <p>Best place: <span>Queen Margharitas</span></p>
                 </article>
                 <article>
                     <h4>Quesadillas</h4>
-                    <img src="https://bit.ly/2ryI6bZ" />
+                    <img src="quesadilla.jpg" />
                     <p>Best time to eat: <span>Afternoon Siesta</span></p>
                     <p>Best place: <span>Mejico</span></p>
                 </article>
                 <article>
                     <h4>Icecream Pancakes</h4>
-                    <img src="https://bit.ly/2zUznp2" />
+                    <img src="icecream_pancakes.jpg" />
                     <p>Best time to eat: <span>Breaky</span></p>
                     <p>Best place: <span>Pancakes on the Rocks</span></p>
                 </article>
                 <article>
                     <h4>Loaded Fries</h4>
-                    <img src="https://bit.ly/2GdfYVK" />
+                    <img src="loaded_fries.jpg" />
                     <p>Best time to eat: <span>During the game</span></p>
                     <p>Best place: <span>My House</span></p>
                 </article>
