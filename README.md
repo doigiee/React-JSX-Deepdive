@@ -1,4 +1,4 @@
-# Challenge Title
+# Sandra's Static Site
 
 ## Setup
 
