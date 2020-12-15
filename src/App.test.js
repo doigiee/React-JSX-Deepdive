@@ -65,7 +65,7 @@ describe("BoldParagraph component", () => {
     const contactSection = result.props.children[result.props.children.length-2]
     expect(contactSection.props.children[0]).toEqual(<BoldParagraph firstWord="Phone:" theRest={<LinkTo external={true} href="tel:12345678" text="+12345678" />} />)
     expect(contactSection.props.children[1]).toEqual(<BoldParagraph firstWord="Email:" theRest={<LinkTo external={true} href="mailto:test@test.com" text="thatsme@test.com" />} />)
-    expect(contactSection.props.children[2]).toEqual(<BoldParagraph firstWord="Twitter:" theRest={<LinkTo external={true} href="#twitter" text="superfun" />} />)
+    expect(contactSection.props.children[2]).toEqual(<BoldParagraph firstWord="Twitter:" theRest={<LinkTo external={true} href="#twitter" text="#superfun" />} />)
   })
 })
 
@@ -108,7 +108,7 @@ describe("FoodItem component", () => {
     expect(pizza).toEqual(<FoodItem name="Pizza" place="Queen Margharitas" src="pizza.jpg" time="All the time" />)
     expect(quesadillas).toEqual(<FoodItem name="Quesadillas" place="Mejico" src="quesadilla.jpg" time="Afternoon Siesta" />)
     expect(icecreamPancakes).toEqual(<FoodItem name="Icecream Pancakes" place="Pancakes on the Rocks" src="icecream_pancakes.jpg" time="Brekky" />)
-    expect(loadedFries).toEqual(<FoodItem name="Loaded Fries" place="My House" src="quesadilla.jpg" time="During the game" />)
+    expect(loadedFries).toEqual(<FoodItem name="Loaded Fries" place="My House" src="loaded_fries.jpg" time="During the game" />)
   })
 })
 
@@ -146,7 +146,7 @@ describe("ListItems component should", () => {
     const listItems = sectionItems[sectionItems.length-1].props.children.props.children.props.items
     expect(listItems.length).toEqual(4)
     expect(listItems[0]).toEqual(<BoldParagraph firstWord="Pop" theRest="culture maven. Beer fan. Award-winning music junkie. Extreme coffee enthusiast. Thinker. Tv specialist." />)
-    expect(listItems[1]).toEqual(<BoldParagraph firstWord="Friendly" theRest="web maven. Bacon lover. General internet specialist. Incurable travel scholar.." />)
+    expect(listItems[1]).toEqual(<BoldParagraph firstWord="Friendly" theRest="web maven. Bacon lover. General internet specialist. Incurable travel scholar." />)
     expect(listItems[2]).toEqual(<BoldParagraph firstWord="Subtly" theRest="charming twitter lover. Social media fan. Incurable travel geek. Lifelong pop culture specialist. Tv scholar." />)
     expect(listItems[3]).toEqual(<BoldParagraph firstWord="Unable" theRest="to type with boxing gloves on. Proud bacon fan. Music junkie. Coffee ninja. Beer specialist." />)
   })

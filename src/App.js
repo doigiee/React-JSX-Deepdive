@@ -64,7 +64,7 @@ const App = () => {
                 <article>
                     <h4>Icecream Pancakes</h4>
                     <img src="icecream_pancakes.jpg" alt="pancakes"/>
-                    <p>Best time to eat: <span>Breaky</span></p>
+                    <p>Best time to eat: <span>Brekky</span></p>
                     <p>Best place: <span>Pancakes on the Rocks</span></p>
                 </article>
                 <article>
