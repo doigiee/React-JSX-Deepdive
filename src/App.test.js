@@ -164,13 +164,21 @@ describe("Section component should", () => {
   test("render a SectionHeading component inside", () => {
     const renderer = new ShallowRenderer()
     renderer.render(<Section name="about-me" heading="This Is Me!" />);
-    const result = renderer.getRenderOutput();
-    const section = result.props.children[0]
-    expect(section).toEqual(<SectionHeading text="This Is Me!"/>)
+    let result = renderer.getRenderOutput();
+    let section = result.props.children[0]
+    expect(section).toEqual(<SectionHeading text="This Is Me!" />)
+    renderer.render(<Section name="testing" heading="Time to Test!" />);
+    result = renderer.getRenderOutput();
+    section = result.props.children[0]
+    expect(section).toEqual(<SectionHeading text="Time to Test!" />)
+
   })
   test("pass down children", () => {
-    const { getByText } = render(<Section name="about-me" heading="This Is Me!"><p>Hello World</p></Section>)
-    const paragraph = getByText("Hello World")
+    let { getByText } = render(<Section name="about-me" heading="This Is Me!"><p>Hello World</p></Section>)
+    let paragraph = getByText("Hello World")
+    expect(paragraph).toBeInTheDocument()
+    getByText = render(<Section name="testing" heading="Time to Test!"><p>Testing is fun!</p></Section>).getByText
+    paragraph = getByText("Testing is fun!")
     expect(paragraph).toBeInTheDocument()
   })
   test("be used in the <App />", () => {
@@ -182,22 +190,3 @@ describe("Section component should", () => {
     expect(result.props.children[3].type).toEqual(Section)
   })
 })
-
-
-// test('testing get roles', () => {
-//   render(<App />)
-//   const nav = document.querySelector("nav")
-//   console.log(getRoles(nav))
-// })
-
-
-// Needs improving
-// test('shallow', () => {
-//   const renderer = new ShallowRenderer()
-//   const secondRender = new ShallowRenderer()
-//   renderer.render(<App />);
-//   secondRender.render(<StarterCode />)
-//   const result = renderer.getRenderOutput();
-//   const resultTwo = secondRender.getRenderOutput()
-//   expect(result).not.toEqual(resultTwo)
-// })
